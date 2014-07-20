@@ -1,0 +1,216 @@
+//Variables
+@tamanyoIcono: 60px;
+@colorGris: #a8a8a8;
+@colorRojo: #D94D43;
+@colorNaranja: #F76B39;		
+@colorAmarillo: #FFB742;
+@colorAzulClaro: #52C6DE;
+@colorAzulOscuro: #4A5A6B;
+@nivelSaturacion: -50%;
+
+@font-face {
+    font-family: champage;
+    src: url('../fonts/champage.ttf');
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    transition: all 1s;
+    margin-top: 30px;
+    background-color: @colorAmarillo;
+    border: none;
+}
+#cajaTitulo {
+	font-family: champage;
+	text-align: center;
+}
+#cajaTitulo h1 {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-weight: bolder;
+	color: white;
+	background-color: @colorNaranja;
+}
+#cajaTitulo h2 {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 30px;
+	color: @colorAzulOscuro;
+	background-color: @colorRojo;
+	color: white;
+	font-size: 1.5em;
+}
+.itemLogro {
+	transition: all 1s;
+}
+.cajaIcono {
+	height: @tamanyoIcono;
+	width: @tamanyoIcono;
+	background: @colorAzulClaro;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 78px;
+	margin: 0 auto;
+	color: black;
+}
+.desactivado .cajaIcono {
+	color: @colorGris;
+	background-color: @colorAzulOscuro;
+}
+.desactivado .panel-heading h2, .desactivado .panel-body {
+	color: @colorGris;
+}
+.desactivado .panel-heading {
+	background-color: saturate(@colorRojo, @nivelSaturacion) !important;
+}
+.desactivado .panel {
+	background-color: saturate(@colorNaranja, @nivelSaturacion);
+}
+.desactivado .panel-default {
+	border-color: saturate(@colorRojo, @nivelSaturacion);
+}
+.desactivado .btn-primary.active {
+	background-color: @colorAzulOscuro;
+	border-color: @colorAzulOscuro;
+}
+i {
+	margin-top: 5px;
+	font-size: 3em;
+}
+.cajaBotones {
+	float: right;
+}
+#cajaCrearCuenta {
+	margin-top: 30px;
+}
+#botonCrearCuenta {
+	margin-top: 20px;
+}
+.nav-tabs.nav-justified>.active>a, .nav-tabs.nav-justified>.active>a:hover, .nav-tabs.nav-justified>.active>a:focus {
+	background-color: @colorAmarillo;
+	font-weight: bolder;
+	border: none;
+	color: @colorRojo;
+	cursor: pointer;
+}
+.nav-tabs.nav-justified>li>a {
+	color: @colorRojo;
+	border-bottom: none;
+}
+.nav-tabs.nav-justified>li>a:hover {
+	background-color: @colorAmarillo;
+	border-color: @colorAmarillo;
+	font-weight: bolder;
+}
+.nav i {
+	font-size: 2em;
+}
+.panel {
+	background-color: @colorNaranja;
+}
+.panel-default>.panel-heading {
+	background-image: none;
+}
+.panel-heading {
+	height: 58px;
+	background-color: @colorRojo !important;
+	border: none;
+}
+.panel-heading h2 {
+	color: white;
+}
+.navbar-toggle {
+	border: 1px solid @colorRojo;
+}
+.panel-default {
+	border-color: @colorRojo;
+	color: white;
+}
+.icon-bar {
+	background: @colorRojo;
+}
+.navbar {
+	background-color: @colorAmarillo;
+	box-shadow: 0px 10px 5px rgba(0,0,0,0.5);
+}
+.btn-primary.active {
+	background-image: none;
+	background-color: @colorAzulClaro;
+	border-color: @colorAzulClaro;
+}
+.btn-default {
+	background-image: none;
+	background-color: white;
+	border-color: white;
+}
+#sinRed {
+	display: none;
+	position: absolute;
+	height: 100px;
+	width: 100%;
+	text-align: center;
+	top: 40%;
+	margin: 0 auto;
+	color: @colorRojo;
+}
+#botonReconectar {
+	background-color: @colorRojo;
+	border: none;
+	color: white;
+	font-size: 1.2em;
+}
+#botonReconectar:hover {
+	background-color: white;
+	color: @colorRojo;
+}
+.table-responsive {
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-top: 10px;
+	border: none;
+}
+.table {
+	font-size: 1.2em;	
+}
+.table td, .table th {
+	text-align: center;
+}
+.table th {
+	color: white;
+}
+.table td {
+	color: #4A5A6B;
+}
+.cargaBoton {
+	width: 40px;
+	height: 40px;
+	background-color: @colorAzulOscuro;
+	-webkit-animation: aniCarga 1s infinite; /* Chrome, Safari, Opera */
+    animation: aniCarga 1s infinite;
+    border-left: 5px solid white;
+	border-right: 5px solid white;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes aniCarga {
+    from {
+    	-webkit-transform:rotate(0deg);;
+    } to {
+    	-webkit-transform:rotate(360deg);
+    }
+}
+
+/* Standard syntax */
+@keyframes aniCarga {
+    from {
+    	transform:rotate(0deg);;
+    } to {
+    	transform:rotate(360deg);
+    }
+}
+
+#cajaForm {
+	padding-right: 40px;
+	padding-left: 40px;
+}

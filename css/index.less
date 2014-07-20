@@ -1,0 +1,31 @@
+//Variables
+@colorAzulClaro: #52C6DE;
+@colorAzulOscuro: #4A5A6B;
+
+body {
+    background-image: url('../img/copa.png');
+    background-repeat: no-repeat;
+    background-position: 190% 190%;
+    background-attachment:fixed;
+    background-size: 80% ;
+}
+button {
+	display: block;
+	margin: 0 auto;
+	width: 180px;
+	color: white;
+	background-image: none;
+	transition: all 1s;
+}
+#botonCrearCuenta, #botonEntrar {
+	background-color: @colorAzulClaro;
+	color: white;
+	border: none;
+}
+#botonCrearCuenta:hover, #botonEntrar:hover {
+	border-left: 5px solid white;
+	border-right: 5px solid white;
+}
+.row {
+	text-align: center;
+}

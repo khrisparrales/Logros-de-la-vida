@@ -1,0 +1,36 @@
+@colorAzulClaro: #52C6DE;
+@colorRojo: #D94D43;
+@colorNaranja: #F76B39;
+
+#cajaTitulo h2 {
+	background-color: @colorAzulClaro;
+}
+#botonRegistrarse, #botonVolver {
+	background-color: @colorAzulClaro;
+	color: white;
+	border: none;
+}
+#botonRegistrarse {
+	background-color: @colorNaranja;
+}
+#botonVolver {
+	background-color: @colorRojo;
+}
+#botonRegistrarse:hover, #botonVolver:hover {
+	border-left: 5px solid white;
+	border-right: 5px solid white;
+}
+button {
+	display: block;
+	margin: 0 auto;
+	width: 180px;
+	color: white;
+	background-image: none;
+	transition: all 1s;
+}
+.row {
+	text-align: center;
+}
+.errorForm {
+	border: 5px solid @colorRojo;
+}
