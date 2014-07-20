@@ -304,7 +304,36 @@ $(document).ready(function() {
 			$cajaMens.text(sHTMLVal)
 		} else {
 			//Comprueba si el alias esta libre
-			
+			$.ajax({
+		    url: sURLSer + 'registrarUsuario.php',
+		    dataType: 'jsonp',
+        	contentType: "application/json; charset=utf-8",
+		    type: 'GET',
+		    crossDomain: true,
+		    data: {
+		        'alias' : $alias.val(),
+		        'pass' : $pass1.val(),
+		        'email' : $correo.val()
+		    },
+		    success: function (respuesta) {
+				var aRespu = jQuery.makeArray(respuesta)
+				var iIdUsur = aRespu[0]['usuario'];
+				if(iIdUsur > 0) {
+					//Registro
+					localStorage.setItem('sesion', iIdUsur);
+					$(location).attr('href', 'logros.html');
+				} else {
+					//Login incorrecto
+					$cajaMens.addClass('alert alert-danger')
+					$cajaMens.text('-El Alias ya está utilizado.')
+					$alias.addClass('errorForm')
+				}
+		    }, 
+			error: function (jqXHR, textStatus, errorThrown) { 
+				mostrarMensSinRed()
+				console.log(textStatus + ': ' + errorThrown.message)
+			}
+		})
 		}
 	}
 

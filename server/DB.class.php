@@ -2,7 +2,7 @@
 
 /**
  * Clase para utilizar la base de datos
- * 1.1v
+ * 1.2v
  */
 class DB {
 	//Variables
@@ -14,6 +14,7 @@ class DB {
 	private $sQuery;
 	private $aRows = array();
 	private $conn;
+	private $iLastId = 0;
 
 	/**
 	 * Constructor
@@ -41,6 +42,7 @@ class DB {
 		$this->sQuery = $insSQL;
 		$this->abrirConexion();
 		$this->conn->query($this->sQuery);
+		$this->iLastId = $this->conn->lastInsertId();
 		$this->cerrarConexion();
 	}
 	/**
@@ -59,14 +61,21 @@ class DB {
 		return $result;
 	}
 
-/**
- * Método que cuenta los resultados de una consulta Select
- * @param  String $insSQL Sentencia SQL
- * @return int         número de consultas que cumplen la query
- */
+	/**
+	 * Método que cuenta los resultados de una consulta Select
+	 * @param  String $insSQL Sentencia SQL
+	 * @return int         número de consultas que cumplen la query
+	 */
 	public function contarResultadosQuery($insSQL){
 		$result = count($this->obtenerResultado($insSQL));
 		return $result;
+	}
+
+	/**
+	 * Método que devuelve el último id al realizar un insert
+	 */
+	public function getLastId() {
+		return $this->iLastId;
 	}
 }
 
