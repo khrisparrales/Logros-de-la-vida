@@ -6,6 +6,10 @@
 
 https://play.google.com/store/apps/details?id=com.androsGames.logrosDeLaVida&hl=es
 
+## Versión web
+
+http://programadorwebvalencia.com/portafolioMaterial/logrosDeLaVida/
+
 ## Capturas
 
 ![alt tag](https://lh4.ggpht.com/1TYmumEmAAL0RzguymxQJQB-l_4GdBuUBwPhh5Lndcm0HSMSmhaGqMbbWY9TjNqUTSCI=h900-rw)
