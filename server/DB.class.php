@@ -8,9 +8,9 @@ class DB {
 	//Variables
 	public static $DB_HOST = 'localhost';
 	public static $DB_USER = 'root';
-	public static $DB_PASS = '9578';
+	public static $DB_PASS = '';
 	public static $DB_TYPE = 'mysql';
-	public static $DB_NOM = 'logrosDeLaVida';
+	public static $DB_NOM = 'nombre base de datos';
 	private $sQuery;
 	private $aRows = array();
 	private $conn;
