@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	//Variables
-	var sURLSer = 'http://andros.myftp.org/logrosDeLaVida/';
+	var sURLSer = 'http://andros-films.com/server-LogrosDeLaVida/';
 	var $cajaLogros = $('#cajaLogros')
 	var $cajaForm = $('#cajaForm')
 	var $cajaCrearCuenta = $('#cajaCrearCuenta')
@@ -100,6 +100,7 @@ $(document).ready(function() {
 	 * @return {String}           HTML
 	 */
 	function generarHTMLLogro(iniId, insTitulo, insDecr, insIcon, insReal) {
+		console.log(insDecr)
 		var sOn = '';
 		var sOff = '';
 		var sIconDes = '';

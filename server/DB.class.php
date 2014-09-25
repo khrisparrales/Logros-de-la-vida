@@ -6,11 +6,11 @@
  */
 class DB {
 	//Variables
-	public static $DB_HOST = 'localhost';
-	public static $DB_USER = 'root';
-	public static $DB_PASS = '';
-	public static $DB_TYPE = 'mysql';
-	public static $DB_NOM = 'nombre base de datos';
+	public static $DB_HOST = 'localhost';//host database
+	public static $DB_USER = 'user database';
+	public static $DB_PASS = 'pass database';
+	public static $DB_TYPE = 'mysql';//type database: sqlite, PostgreSQL...
+	public static $DB_NOM = 'nom database';
 	private $sQuery;
 	private $aRows = array();
 	private $conn;
@@ -26,7 +26,7 @@ class DB {
 	 */
 	private function abrirConexion() {
 		$this->conn = new PDO(self::$DB_TYPE . ':host=' . self::$DB_HOST 
-			. ';dbname=' . self::$DB_NOM, self::$DB_USER, self::$DB_PASS);
+			. ';dbname=' . self::$DB_NOM . ';charset=utf8;', self::$DB_USER, self::$DB_PASS);
 	}
 	/**
 	 * Método que desconecta de la base de datos
